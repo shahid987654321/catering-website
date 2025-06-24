@@ -43,3 +43,58 @@
   <img src="hero3.jpg" class="slide" alt="Luxury Dish 3">
   <div class="overlay"><h1>Welcome to Your Catering Experience</h1></div>
 </section>
+<section id="about" class="container">
+  <h2 class="text-center">About Us</h2>
+  <p>We craft home-cooked meals with premium ingredients and elegance — perfect for intimate gatherings or grand celebrations.</p>
+</section>
+
+<section id="menu" class="container">
+  <h2 class="text-center">Our Menu</h2>
+  <div class="row">
+    <div class="col-md-4 menu-item">
+      <img src="dish1.jpg" alt="Dish 1">
+      <h4>Signature Dish</h4><p>Decadent flavors tailored to your taste.</p>
+    </div>
+    <div class="col-md-4 menu-item">
+      <img src="dish2.jpg" alt="Dish 2">
+      <h4>Deluxe Platter</h4><p>Elegant bite-sized delights for events.</p>
+    </div>
+    <div class="col-md-4 menu-item">
+      <img src="dish3.jpg" alt="Dish 3">
+      <h4>Special Dessert</h4><p>Indulgent treat that ends on a sweet note.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="container">
+  <h2 class="text-center">Contact & Follow Us</h2>
+  <div class="text-center">
+    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</section>
+
+<footer>
+  <div class="container text-center">
+    <p>&copy; 2025 Your Catering Name • <a href="terms.html" style="color:#aaa">Terms</a> • <a href="cancellation.html" style="color:#aaa">Cancellation</a></p>
+    <div class="social">
+      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS + jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/js/bootstrap.bundle.min.js"></script>
+<script>
+  let slides = document.querySelectorAll('.slide');
+  let idx = 0;
+  setInterval(() => {
+    slides[idx].classList.remove('active');
+    idx = (idx+1) % slides.length;
+    slides[idx].classList.add('active');
+  }, 5000);
+</script>
