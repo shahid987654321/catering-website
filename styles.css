@@ -1,0 +1,205 @@
+/* styles.css — Light Luxury Design */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #fffaf4, #fefefe);
+  color: #444;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  background: linear-gradient(to right, #f3c27c, #d4a373);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-links a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: #666;
+  font-weight: 600;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: #d4a373;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  text-align: center;
+  margin-top: 4rem;
+  gap: 2rem;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(to right, #f3c27c, #d4a373);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-text p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+
+.talk-box {
+  background: #fffaf4;
+  border-left: 4px solid #d4a373;
+  padding: 1rem 1.5rem;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.6s ease;
+}
+
+.talk-box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-image {
+  position: relative;
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.steam {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 1;
+}
+
+.steam-bubble {
+  position: absolute;
+  bottom: 0;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: floatUp 4s ease-in infinite;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0) scale(0.8); opacity: 0.4; }
+  50% { opacity: 0.7; }
+  100% { transform: translateY(-100px) scale(1.2); opacity: 0; }
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+  margin: 5rem 0;
+}
+
+.feature-box {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 16px;
+  flex: 1 1 280px;
+  text-align: center;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.4s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.feature-box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.feature-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(212, 163, 115, 0.2);
+}
+
+.feature-box h2 {
+  font-size: 1.5rem;
+  color: #d4a373;
+  margin-bottom: 1rem;
+}
+
+.contact-cta {
+  text-align: center;
+  background: #fffaf4;
+  padding: 4rem 2rem;
+  border-radius: 16px;
+}
+
+.contact-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #b77d4b;
+}
+
+.cta-button {
+  background: #d4a373;
+  border: none;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #b77d4b;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 1rem;
+  color: #999;
+  border-top: 1px solid #eaeaea;
+  margin-top: 3rem;
+}

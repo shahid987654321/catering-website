@@ -1,0 +1,32 @@
+// script.js — Scroll Effects + Steam
+
+// Show elements when they scroll into view
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+// Target talk-box and feature-boxes
+const revealElements = document.querySelectorAll('.talk-box, .feature-box');
+revealElements.forEach(el => observer.observe(el));
+
+// Create animated steam bubbles
+const steamContainer = document.querySelector('.steam');
+function createSteamBubble() {
+  const bubble = document.createElement('div');
+  bubble.classList.add('steam-bubble');
+  bubble.style.left = `${Math.random() * 80 + 10}px`;
+  bubble.style.animationDuration = `${Math.random() * 2 + 3}s`;
+  steamContainer.appendChild(bubble);
+
+  setTimeout(() => {
+    steamContainer.removeChild(bubble);
+  }, 4000);
+}
+
+setInterval(createSteamBubble, 800);
